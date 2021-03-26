@@ -3,9 +3,6 @@
 A simple demonstration of using `flutter_riverpod` to fetch data from api and render on UI.
 
 
-https://user-images.githubusercontent.com/66630141/112653572-90b40700-8e74-11eb-97c2-67a2d4a3a117.mov
-
-
 Hey Folks! Today we are going learn about how we can fetch API in the flutter app using **Riverpod** instead of the Future.
 
         #Riverpod;
