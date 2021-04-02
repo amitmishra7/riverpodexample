@@ -204,7 +204,7 @@ class MyApp extends StatelessWidget {
 
 That's it folks! We're done with all the coding. Just go ahead and run your app!
 
-Fantastic!! You have jusr learned how to work with APIs using `Riverpod`.
+Fantastic!! You have just learned how to work with APIs using `Riverpod`.
 
 ## Important:
 
