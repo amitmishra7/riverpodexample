@@ -17,7 +17,7 @@ We will be using the `https://api.themoviedb.org/3` to fetch the list of movies.
 ## Step 1 :  Install Packages
 
 Place the below dependencies in your `pubspec.yaml' file and run
-```
+```dart
   dio: ^3.0.10
   flutter_riverpod: any
   eva_icons_flutter: ^2.0.1
@@ -31,7 +31,7 @@ The most important ones are the `flutter_riverpod` for state management and `dio
 
 Create the 1st model class file as `movie.dart`
 
-```
+```dart
 class Movie {
   final int id;
   final num popularity;
@@ -62,7 +62,7 @@ class Movie {
 
 Create another model class which holds this model class as `movie_response.dart`
 
-```
+```dart
 import 'movie.dart';
 
 class MovieResponse {
@@ -90,7 +90,7 @@ class MovieResponse {
 
 `remote_api.dart` is responsible for making rest api calls.
 
-```
+```dart
 import 'package:dio/dio.dart';
 import 'package:movie_app/model/movie_response.dart';
 
@@ -120,7 +120,7 @@ Future<MovieResponse> getMovies() async {
 
 `state_manager.dart` will help us to manage the state of our app.
 
-```
+```dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app/model/movie_response.dart';
 import 'package:movie_app/network/remote_api.dart';
@@ -134,7 +134,7 @@ final movieResponseFuture = FutureProvider<MovieResponse>((ref) async {
 
 `movie_list.dart` holds the UI of our app.
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app/model/movie_response.dart';
@@ -174,7 +174,7 @@ class MoviesListPage extends ConsumerWidget {
 
 Wrap your `main.dart` file with ProvideScope.
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_app/pages/movies_list.dart';
